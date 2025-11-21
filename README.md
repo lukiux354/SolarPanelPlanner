@@ -114,8 +114,7 @@ This project is provided for educational and demonstration purposes as part of a
 
 # Contact
 
-**Lukas Navickas** - [Link to your LinkedIn or Email]
-*Project Author*
+**Lukas Navickas** - https://www.linkedin.com/in/lukas-navickas-013a91224
 
 # Visuals
 
