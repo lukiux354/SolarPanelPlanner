@@ -1,0 +1,41 @@
+// Widgets.
+// Header widgets.
+ul.wbar {
+    a {
+        text-decoration: none;
+        color: #ffffff;
+    }
+
+    form {
+        padding: 0;
+        background: transparent;
+
+        button {
+            border: 0;
+            background-color: transparent;
+            color: #fff;
+            cursor: pointer;
+        }
+    }
+
+    display: flex;
+    justify-content: flex-start;
+    flex-flow: row nowrap;
+    flex-grow: 1;
+    height: 50px;
+
+    li.logo {
+        flex-grow: 1;
+        margin: 10px 0px 0px 10px;
+        width: 347px;
+        height: 30px;
+        background: transparent url(img/logo.png) top left no-repeat;
+    }
+
+    li.user {
+        box-sizing: content-box;
+        padding: 20px 10px 0px 10px;
+        margin-left: 5px;
+        font-weight: bold;
+    }
+}

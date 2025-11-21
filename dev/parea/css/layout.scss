@@ -1,0 +1,27 @@
+// General layout.
+a {
+    color: #ffffff;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #505050;
+    font-family: var(--font-family-body);
+}
+
+.content {
+    padding: 0px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.footer {
+    background-color: #4d4d4d;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    font-size: 12px;
+    margin-top: auto;
+}

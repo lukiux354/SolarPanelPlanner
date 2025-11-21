@@ -1,0 +1,153 @@
+{% extends 'rarea/layout.html' %}
+{% load i18n %}
+{% load static %}
+
+{% block content %}
+    <h1 class="con-header">UI Guidelines</h1>
+
+    <div class="col2 gap">
+        <!-- 1 Column form layout -->
+        <form class="col1" method="">
+            <h2>Form (col1)</h2>
+            <p>
+                <label for="text_field">Text field</label>
+                <input id="text_field" type="text" value="Value">
+                {% if 1 %}<span class="error">Error message. This is very long error message which does not fit into single line.</span>{% endif %}
+            </p>
+            <p>
+                <label for="dropdown_field">Dropdown field</label>
+                <select id="dropdown_field">
+                    <option value="1">value 1</option>
+                    <option value="2">value 2</option>
+                    <option value="3">value 3</option>
+                </select>
+                {% if 1 %}<span class="error">Error message</span>{% endif %}
+            </p>
+            <p>
+                <label for="button_field">Button field</label>
+                <button value="rb">Button</button>
+                {% if 1 %}<span class="error">Error message</span>{% endif %}
+            </p>
+        </form>
+
+        <!-- 2 Column Form layout -->
+        <form class="col2" method="">
+            <h2 class="fill2">Form (col2)</h2>
+            <p>
+                <label for="text_field">Text field</label>
+                <input id="text_field" type="text" value="Value">
+                {% if 1 %}<span class="error">Error message. This is very long error message which does not fit into single line.</span>{% endif %}
+            </p>
+            <p>
+                <label for="dropdown_field">Dropdown field</label>
+                <select id="dropdown_field">
+                    <option value="1">value 1</option>
+                    <option value="2">value 2</option>
+                    <option value="3">value 3</option>
+                </select>
+                {% if 1 %}<span class="error">Error message</span>{% endif %}
+            </p>
+            <p>
+                <input id="checkbox_field" type="checkbox" value="cb">Checkbox field
+                {% if 1 %}<span class="error">Error message</span>{% endif %}
+            </p>
+            <p>
+                <input id="radio_field" type="radio" value="rb"/>Radio field
+                {% if 1 %}<span class="error">Error message</span>{% endif %}
+            </p>
+            <p class="fill2">
+                <label for="textarea_field">Textarea</label>
+                <textarea id="textarea_field"></textarea>
+                {% if 1 %}<span class="error">Error message</span>{% endif %}
+            </p>
+            <p>
+                <label for="button_field">Button field</label>
+                <button value="rb">Button</button>
+                {% if 1 %}<span class="error">Error message</span>{% endif %}
+            </p>
+            <p>
+                <label for="list_field">List field:</label>
+                <select id="list_field" multiple>
+                    <option value="1">value 1</option>
+                    <option value="2">value 2</option>
+                    <option value="3">value 3</option>
+                </select>
+                {% if 1 %}<span class="error">Error message</span>{% endif %}
+            </p>
+        </form>
+
+
+        <!-- 3 Column form layout -->
+        <form class="col3" method="">
+            <h2 class="fill3">Form (col3)</h2>
+            <p class="fill2">
+                <label for="text_field">Text field</label>
+                <input id="text_field" type="text" value="Value">
+                <span class="error">Error message. This is very long error message which does not fit into single line.</span>
+            </p>
+            <p>
+                <label for="dropdown_field">Dropdown field</label>
+                <select id="dropdown_field">
+                    <option value="1">value 1</option>
+                    <option value="2">value 2</option>
+                    <option value="3">value 3</option>
+                </select>
+                {% if 1 %}<span class="error">Error message</span>{% endif %}
+            </p>
+            <p>
+                <input id="checkbox_field" type="checkbox" value="cb">Checkbox field
+                {% if 1 %}<span class="error">Error message</span>{% endif %}
+            </p>
+            <p>
+                <input id="radio_field" type="radio" value="rb"/>Radio field
+                {% if 1 %}<span class="error">Error message</span>{% endif %}
+            </p>
+            <p class="fill3">
+                <label for="textarea_field">Textarea</label>
+                <textarea id="textarea_field"></textarea>
+                {% if 1 %}<span class="error">Error message</span>{% endif %}
+            </p>
+            <p class="fill2">
+                <label for="button_field">Button field</label>
+                <button value="rb">Button</button>
+                {% if 1 %}<span class="error">Error message</span>{% endif %}
+            </p>
+            <p>
+                <label for="list_field">List field:</label>
+                <select id="list_field" multiple>
+                    <option value="1">value 1</option>
+                    <option value="2">value 2</option>
+                    <option value="3">value 3</option>
+                </select>
+                {% if 1 %}<span class="error">Error message</span>{% endif %}
+            </p>
+        </form>
+
+        <!-- Table layout -->
+        <table>
+            <caption>Table</caption>
+            <thead>
+                <tr>
+                    <th>Items</th>
+                    <th>Count</th>
+                    <th>Unit price</th>
+                    <th>Total price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Monitor</td>
+                    <td>5</td>
+                    <td>100.00</td>
+                    <td class="tright">500.00</td>
+                </tr>
+                <tr>
+                    <td>PC case</td>
+                    <td>2</td>
+                    <td>70.00</td>
+                    <td class="tright">140.00</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

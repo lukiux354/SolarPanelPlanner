@@ -1,0 +1,123 @@
+// General layout elements: headers, footers, sidebars.
+
+body {
+    font-family: "OpenSans", sans-serif;
+    font-size: 14px;
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: min-content min-content 1fr min-content;
+}
+
+.header {
+    grid-row: 1;
+    grid-column: 1 / 4;
+    background-color: var(--c-primary);
+    color: var(--c-on-primary);
+}
+
+// Main navigation.
+ul.nav {
+    grid-row: 2;
+    grid-column: 1 / 4;
+    background-color: var(--c-primary);
+
+    li {
+        display: inline-block;
+
+        a {
+            display: block;
+            height: 35px;
+            line-height: 35px;
+            padding: 0px 25px 0px 25px;
+            color: var(--c-on-primary);
+            text-decoration: none;
+            font-size: 1.02rem;
+
+            &:hover {
+                background-color: var(--c-sidebar);
+            }
+        }
+
+        a.current {
+            background-color: #c6e9af;
+            color: #282828;
+            font-weight: bold;
+            border-top-right-radius: 30px;
+            border-bottom-right-radius: 30px;
+        }
+    }
+}
+
+.sbarnav {
+    display: flex;
+    flex-flow: column nowrap;
+    grid-row: 3;
+    grid-column: 1 / 2;
+    background-color: var(--c-sidebar);
+    color: var(--c-on-primary);
+
+    li {
+        a {
+            display: block;
+            padding: 0.8rem;
+            color: var(--c-on-primary);
+            text-decoration: none;
+
+            &:hover {
+                background-color: var(--c-primary);
+            }
+        }
+    }
+
+    li.bottom {
+        margin-top: auto;
+    }
+}
+
+.content {
+    grid-row: 3;
+    grid-column: 2 / 3;
+    overflow-x: auto;
+
+    box-sizing: border-box;
+    padding: 40px 45px 40px 45px;
+    color: var(--c-on-secondary);
+    background-color: var(--c-secondary);
+    width: 100%;
+
+    h1,
+    h1.con-header {
+        font-size: 1.3rem;
+        font-weight: bold;
+    }
+    h1.con-header {
+        margin-bottom: 25px;
+    }
+
+    h2 {
+        font-size: 1.05rem;
+        font-weight: bold;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    a {
+        text-decoration: underline;
+        color: var(--c-on-secondary);
+    }
+}
+
+.content.nopadd {
+    padding: 0px;
+}
+
+.footer {
+    grid-row: 4;
+    grid-column: 1 / 4;
+    background-color: var(--c-sidebar);
+    color: var(--c-on-primary);
+    padding: 10px;
+    text-align: center;
+    font-size: 0.7rem;
+}

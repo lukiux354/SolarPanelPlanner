@@ -1,0 +1,13 @@
+{% extends 'parea/layout.html' %}
+{% load i18n %}
+{% load static %}
+
+{% block content %}
+    <div class="welcome-panel">
+        <div class="header"></div>
+        <div class="content">
+            <div> Welcome to Indeform OSOM.Codex (Sandbox edition) project template. </div>
+            {% include 'core/uauth/login.html' %}
+        </div>
+    </div>
+{% endblock %}

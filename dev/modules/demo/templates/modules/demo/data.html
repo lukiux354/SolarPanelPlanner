@@ -1,0 +1,50 @@
+{% extends 'rarea/layout.html' %}
+{% load i18n %}
+
+{% block content %}
+<form class="col3" method="post">
+    {% csrf_token %}
+    <h2 class="fill3">Create product</h2>
+
+    <p>
+        <label for="{{ form.code.id_for_label }}">{{ form.code.label }}</label>
+        {{ form.code }}
+        {% if form.code.errors %}<span class="error">{{ form.code.errors }}</span>{% endif %}
+    </p>
+    <p>
+        <label for="{{ form.title.id_for_label }}">{{ form.title.label }}</label>
+        {{ form.title }}
+        {% if form.title.errors %}<span class="error">{{ form.title.errors }}</span>{% endif %}
+    </p>
+    <p>
+        <label for="{{ form.stock.id_for_label }}">{{ form.stock.label }}</label>
+        {{ form.stock }}
+        {% if form.stock.errors %}<span class="error">{{ form.stock.errors }}</span>{% endif %}
+    </p>
+
+    <p class="fill3 tright">
+        <input type="submit" name="create-product" value="Create"/>
+    </p>    
+</form>
+
+
+<table class="tspace">
+    <caption>Products</caption>
+    <thead>
+        <tr>
+            <th>Code</th>
+            <th>Title</th>
+            <th>Stock</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for product in object_list %}
+        <tr>
+            <td>{{ product.code }}</td>
+            <td>{{ product.title }}</td>
+            <td>{{ product.stock }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

@@ -1,0 +1,21 @@
+<form class="col1" method="post" name="login_form">
+    {% csrf_token %}
+    <h2> Login </h2>
+    <p>
+        <label for="{{ form.email.id_for_label }}">{{ form.username.label }}</label>
+        {{ form.username }}
+        {% if form.username.errors %}<span class="error">{{ form.username.errors }}</span>{% endif %}
+    </p>
+
+    <p>
+        <label for="{{ form.pwd.id_for_label }}">{{ form.password.label }}</label>
+        {{ form.password }}
+        {% if form.password.errors %}<span class="error">{{ form.password.errors }}</span>{% endif %}
+    </p>
+
+    {{ form.non_field_errors }}
+
+    <p class="tright">
+        <input type="submit" name="login" value="Login"/>
+    </p>
+</form>

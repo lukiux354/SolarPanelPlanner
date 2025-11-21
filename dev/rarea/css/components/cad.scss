@@ -1,0 +1,27 @@
+div.cad {
+    height: 100%;
+
+    ul.cad-header {
+        display: flex;
+        flex-direction: row;
+        background-color: #bbc3d0;
+        border-bottom: 2px solid #6e7683;
+
+        li {
+            width: 36px;
+            height: 36px;
+        }
+
+        li.transform {
+            background: transparent url(icons/transform.png) center center no-repeat;
+        }
+
+        li.transform:hover {
+            background: #9ea4b0 url(icons/transform_hover.png) center center no-repeat;
+        }
+    }
+
+    #view3d {
+        height: calc(100% - 38px);
+    }
+}

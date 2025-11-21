@@ -1,0 +1,48 @@
+{
+    "compilerOptions": {
+        "baseUrl": "./",
+        "outDir": "./dev/pub",
+        "allowJs": true,
+        "checkJs": false,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "allowSyntheticDefaultImports": true,
+        "target": "ES2022",
+        "module": "ES2022",
+        "lib": [
+            "ES2022",
+            "DOM",
+            "DOM.Iterable"
+        ],
+        "moduleResolution": "Node",
+        "strictNullChecks": true,
+        "sourceMap": true,
+        "resolveJsonModule": true,
+        "declaration": false,
+        "noImplicitAny": true,
+        "noUnusedLocals": true,
+        "removeComments": true,
+        "typeRoots": [
+            "**/node_modules/@types",
+            "dev/shared/js/types"
+        ],
+        "paths": {
+            "parea/*": [
+                "dev/parea/*"
+            ],
+            "rarea/*": [
+                "dev/rarea/*"
+            ],
+            "shared/*": [
+                "dev/shared/*"
+            ],
+        }
+    },
+    "include": [
+        "dev/**/*.ts",
+        "dev/**/*.d.ts",
+    ],
+    "exclude": [
+        "**/node_modules/"
+    ]
+}

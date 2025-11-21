@@ -1,0 +1,26 @@
+{% load i18n %}
+{% load static %}
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title> Indeform OSOM.Codex (Sandbox edition) project template </title>
+        <link rel="stylesheet" type="text/css" href="{% static 'parea/build.css' %}" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta charset="UTF-8"/>
+        <meta name="description" content="Indeform OSOM.Codex (Sandbox edition) project template"/>
+        <meta name="keywords" content=""/>
+        <meta name="author" content="(C) Indeform Ltd."/>
+    </head>
+
+    <body>
+        <div class="content">
+            {% block content %}{% endblock content %}
+        </div>
+
+        {% include 'parea/footer.html' %}
+        <script type="text/javascript" src="{% static 'shared/build.js' %}"></script>
+        <script type="text/javascript" src="{% static 'parea/build.js' %}"></script>
+    </body>
+</html>

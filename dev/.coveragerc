@@ -1,0 +1,8 @@
+[run]
+source = modules.solar
+omit = 
+    */tests.py
+    */tests_integration.py
+    */count_lines.py
+    */migrations/*
+    */__pycache__/*

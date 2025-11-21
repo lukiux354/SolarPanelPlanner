@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar Panel Planner</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicon/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicon/favicon-16x16.png' %}">
+    <link rel="mask-icon" href="{% static 'favicon/safari-pinned-tab.svg' %}" color="#5bbad5">
+    <link rel="shortcut icon" href="{% static 'favicon/favicon.ico' %}">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="{% static 'favicon/browserconfig.xml' %}">
+    <meta name="theme-color" content="#ffffff">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static 'solar/build.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+
+</head>
+<body class="flex-layout">
+    <!-- Header bar -->
+    <header>
+        <!-- projectt selection -->
+        <div class="header-left">
+            <div class="project-selection-panel">
+                <div class="panel-header">
+                    <h4>Select a Project</h4>
+                    <span class="collapse-icon">▼</span>
+                </div>
+                <div class="panel-content">
+                    <ul class="project-list">
+                        <!-- projects will be populated dynamically -->
+                    </ul>
+                    <div class="create-project-btn">
+                        <i class="fas fa-plus"></i>
+                        <span>Create New Project</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="header-center">
+            <!-- Project creation -->
+            <div id="project-creation">
+                <button id="create-project-btn" class="btn primary"><i class="fas fa-plus"></i> Create New Project</button>
+            </div>
+            
+            <div id="button-container">
+            </div>
+        </div>
+        
+        <!-- layout -->
+        <div class="header-right">
+            <div id="layout-controls">
+                <button id="show-both-btn" class="layout-btn active">Split</button>
+                <button id="show-map-btn" class="layout-btn">2D</button>
+                <button id="show-3d-btn" class="layout-btn">3D</button>
+            </div>
+            
+            <div id="auth-controls">
+                {% if user.is_authenticated %}
+                    {% if user.profile.is_guest %}
+                        {% comment %} <span class="username guest-username">Guest</span> {% endcomment %}
+                        <button id="login-btn" class="auth-btn">Login</button>
+                        <button id="register-from-header-btn" class="auth-btn highlight">Register</button>
+                    {% else %}
+                        <span class="username">{{ user.username }}</span>
+                        <button id="logout-btn" class="auth-btn">Logout</button>
+                    {% endif %}
+                {% else %}
+                    <button id="login-btn" class="auth-btn">Login</button>
+                    <button id="register-btn" class="auth-btn">Register</button>
+                {% endif %}
+            </div>
+
+            
+        </div>
+        <div id="help-button">
+            <button id="show-help-btn" class="help-btn" title="Show Help">
+                <i class="fas fa-question-circle"></i>
+            </button>
+        </div>
+    </header>
+
+    {% if user.is_authenticated and user.profile.is_guest %}
+    <div class="guest-notice">
+        <div class="notice-content">
+            <span class="notice-text">You're currently working as a guest. Your projects will be available for 7 days.</span>
+            <a href="#" id="register-from-guest-btn" class="btn">Register now</a>
+            <span>to save your work permanently!</span>
+        </div>
+    </div>
+    {% endif %}
+
+    <!-- main -->
+    <div id="app-container">
+        <div id="map-column">
+            <button id="delete-btn" class="btn danger disabled" disabled title="Select a project first"><i class="fas fa-house-damage"></i>&nbsp;Delete Roof</button>
+            <div id="search-container" class="map-search-container">
+                <input id="search-box" type="text" placeholder="Search for an address...">
+            </div>
+            <button id="cancel-drawing-btn" class="btn danger" style="display: none; position: absolute; top: 70px; left: 50%; transform: translateX(-50%); z-index: 100;">
+                <i class="fas fa-times"></i> Cancel Drawing
+            </button>
+            
+            <div id="map" data-api-key="{{ google_maps_api_key }}"></div>
+        </div>
+        <div id="resizable-splitter"></div>
+        <div id="three-column">
+            <div id="three-container"></div>
+        </div>
+    </div>
+
+    <!-- js -->
+    <script type="module" src="{% static 'solar/build.js' %}"></script>
+
+
+    <!-- auth -->
+    <div id="auth-modal" class="modal-backdrop" style="display: none;">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h4 id="modal-title">Login</h4>
+                <button class="close-modal-btn">×</button>
+            </div>
+            <div class="modal-body">
+                <div id="auth-error" class="error-message" style="display: none;"></div>
+                
+                <!-- login -->
+                <form id="login-form" class="auth-form">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="login-username">Username</label>
+                        <input type="text" id="login-username" name="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">Password</label>
+                        <input type="password" id="login-password" name="password" required>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn primary">Login</button>
+                    </div>
+                    <div class="form-footer">
+                        <p>Don't have an account? <a href="#" id="show-register">Register</a></p>
+                    </div>
+                </form>
+                
+                <!-- register -->
+                <form id="register-form" class="auth-form" style="display: none;">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="register-username">Username</label>
+                        <input type="text" id="register-username" name="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-email">Email</label>
+                        <input type="email" id="register-email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-password1">Password</label>
+                        <input type="password" id="register-password1" name="password1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-password2">Confirm Password</label>
+                        <input type="password" id="register-password2" name="password2" required>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn primary">Register</button>
+                    </div>
+                    <div class="form-footer">
+                        <p>Already have an account? <a href="#" id="show-login">Login</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,80 @@
+// Forms elements: inputs, dropdowns, textareas, checkboxes, buttons, etc.
+
+form.col1 {
+    gap: 20px 40px;
+    width: 300px;
+}
+
+form.col2 {
+    gap: 20px 40px;
+    width: 600px;
+}
+
+form.col3 {
+    gap: 20px 40px;
+    width: 900px;
+}
+
+form.col4 {
+    gap: 20px 40px;
+    width: 1200px;
+}
+
+form {
+    display: inline-block;
+    padding: 25px;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    font-size: 0.8rem;
+
+    h2 {
+        font-size: 1.05rem;
+        font-weight: bold;
+        margin-top: 0px !important;
+        margin-bottom: 10px;
+    }
+
+    p {
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        textarea {
+            box-sizing: border-box;
+            border: solid 1px #c1c1c1;
+            border-radius: 5px;
+            background-color: #fff;
+            color: #333;
+            padding: 5px;
+            width: 100%;
+        }
+
+        input[type="number"].pin {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: textfield;
+            margin: 5px;
+            width: 2rem;
+            text-align: center;
+            font-size: 2rem;
+            padding: 10px 0px 10px 0px;
+            caret-color: transparent;
+        }
+
+        select {
+            box-sizing: border-box;
+            width: 100%;
+        }
+
+        span.error {
+            display: block;
+            font-size: 0.7rem;
+            color: #ff0000;
+            margin-top: 3px;
+        }
+    }
+}

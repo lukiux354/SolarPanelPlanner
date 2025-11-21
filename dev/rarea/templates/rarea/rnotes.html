@@ -1,0 +1,29 @@
+{% extends 'rarea/layout.html' %}
+{% load i18n %}
+
+{% block content %}
+    <h1 class="con-header">Welcome to the OSOM.Codex sandbox edition!</h1>
+    <p class="con-header">
+        Great job! You already did the very first step - initialized and set your project environment. 
+        Please feel free to explore what you can do next.
+    </p>
+
+    <h2 class="con-header">TODO NEXT:</h2>
+    <ul class="dash">
+        <li>Start exploring "dev/parea" and "dev/rarea" to learn more about code/folders structure you should follow for "Areas".</li>
+        <li>Start exploring <a href="/demo/data">"Demo -> Data"</a> and <a href="/demo/cad">"Demo -> CAD"</a> at "dev/modules" to learn more about code/folders structure you should follow wile creating "Modules".</li>
+        <li>Explore <a href="/rarea/ui-guidelines">UI guidelines</a> code at "dev/rarea/templates/ui_guidelines.html" to learn how to form standard forms and views.</li>
+        <li>Got it? So it's time to start creating your own module at "dev/modules"! Good luck!</li>
+    </ul>
+
+    <h2 class="con-header">RELEASES</h2>
+    <h2 class="con-header">osom.codex.current</h2>
+    <ul class="dash">
+        <li>Updated modules and descriptions.</li>
+    </ul>
+
+    <h2 class="con-header">osom.codex.r1.0.202202-01</h2>
+    <ul class="dash">
+        <li>Initial sandbox version.</li>
+    </ul>
+{% endblock %}

@@ -1,0 +1,89 @@
+[33mcommit 2532163484f5649f169517bb1b0a193e6e9c2f6d[m[33m ([m[1;36mHEAD -> [m[1;32mdev_greenenergy[m[33m, [m[1;31morigin/dev_greenenergy[m[33m)[m
+Author: Lukas N <luksonas@gmail.com>
+Date:   Tue Mar 4 14:54:14 2025 +0200
+
+    split big threejs.js file into 10 smaller files.
+
+[33mcommit 66aa02c6000d8611b989a1f3eb52b95f541db7e0[m
+Author: Lukas N <luksonas@gmail.com>
+Date:   Tue Mar 4 14:02:47 2025 +0200
+
+    added ability to switch between 2D and 3D
+
+[33mcommit 322c2224758ff84670cfbc661f84ee0dbb062087[m
+Author: Lukas N <luksonas@gmail.com>
+Date:   Tue Mar 4 12:07:41 2025 +0200
+
+    roof height and shape parameter saving to database
+
+[33mcommit 0ea501e41a4abe9ede23b950eabdd329069ce1b9[m
+Author: Lukas <luksonas@gmail.com>
+Date:   Tue Mar 4 00:12:17 2025 +0200
+
+    snappy vertices (can match height of a different vertex)
+
+[33mcommit 9efe84d21e22a61b4e3640b68592f1f8f8b363d7[m
+Author: Lukas <luksonas@gmail.com>
+Date:   Mon Mar 3 23:44:59 2025 +0200
+
+    roof walls, height, base ground
+
+[33mcommit b1a5c021947280899328e84a3b19f1cbcf270539[m
+Author: Lukas <luksonas@gmail.com>
+Date:   Sun Mar 2 22:25:13 2025 +0200
+
+    fixed API security
+
+[33mcommit e3d866b026d349d88f87ad1df66327a2ffb95349[m
+Author: Lukas <luksonas@gmail.com>
+Date:   Sun Mar 2 01:58:42 2025 +0200
+
+    small code cleanup
+
+[33mcommit 132eb63ad99d859f7a1aeca740f8d0cbbc293b73[m
+Author: Lukas <luksonas@gmail.com>
+Date:   Sun Mar 2 01:51:17 2025 +0200
+
+    minor change: reduced orbitControl damping
+
+[33mcommit 8f90a898ca4221885bc5db1807ed87643aa52fc9[m
+Author: Lukas <luksonas@gmail.com>
+Date:   Sun Mar 2 01:43:32 2025 +0200
+
+    roof 3D modelling along Z axis complete
+
+[33mcommit 01ed6b988044019360765350c1d9093fc5f2a446[m
+Author: Lukas <luksonas@gmail.com>
+Date:   Sat Mar 1 23:21:19 2025 +0200
+
+    added vertex spawning and moving along Z axis
+
+[33mcommit d2e719d2a8150238080d78f25d692e9d9e5848c7[m
+Author: Lukas N <luksonas@gmail.com>
+Date:   Tue Feb 25 17:42:14 2025 +0200
+
+    Added ability to rotate polygons in 3D (OrbitControls)
+
+[33mcommit 1c30ede5ef4999e26284b40b7082e737b96106e5[m
+Author: Lukas N <luksonas@gmail.com>
+Date:   Tue Feb 25 17:27:22 2025 +0200
+
+    Added outlines to threejs polygons
+
+[33mcommit 0d0f2dfab3c4d0f3fd4acb1146cc4df7d8fcb0b3[m
+Author: Lukas N <luksonas@gmail.com>
+Date:   Tue Feb 25 17:03:21 2025 +0200
+
+    Starting threejs
+
+[33mcommit feb8a5dc10e7234dcef2da690c58c280b7fbadc9[m
+Author: Lukas N <luksonas@gmail.com>
+Date:   Tue Feb 25 14:51:11 2025 +0200
+
+    minor refactoring
+
+[33mcommit b5390d38ed5551078c080b64c84726b9b8ad7647[m
+Author: Lukas N <luksonas@gmail.com>
+Date:   Tue Feb 25 14:26:34 2025 +0200
+
+    Initial commit
