@@ -122,7 +122,7 @@ Below are screenshots demonstrating the design process within the system.
 
 <table>
   <tr>
-    <td align="center"><b>Main Interface (Split View)</b><br><i>Drawing in 2D while visualizing in 3D</i><br><img width="955" height="473" alt="image" src="https://github.com/user-attachments/assets/972b8a11-cb74-41f9-8794-eda63a2d98ee" />
+    <td align="center"><b>Main Interface (Split View)</b><br><i>Drawing in 2D while visualizing in 3D</i><br><img width="400" alt="image" src="https://github.com/user-attachments/assets/972b8a11-cb74-41f9-8794-eda63a2d98ee" />
 </td>
     <td align="center"><b>3D Roof Modeling</b><br><i>Adjusting roof vertices and height</i><br><img src="images/image-2.png" width="420"></td>
   </tr>
