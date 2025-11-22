@@ -122,20 +122,27 @@ Below are screenshots demonstrating the design process within the system.
 
 <table>
   <tr>
-    <td align="center"><b>Main Interface (Split View)</b><br><i>Drawing in 2D while visualizing in 3D</i><br><img width="400" alt="image" src="https://github.com/user-attachments/assets/972b8a11-cb74-41f9-8794-eda63a2d98ee" />
+    <td align="center"><b>Main Interface (Split View)</b><br><i>Drawing in 2D while visualizing in 3D</i><br><img width="500" alt="image" src="https://github.com/user-attachments/assets/972b8a11-cb74-41f9-8794-eda63a2d98ee" />
 </td>
-    <td align="center"><b>3D Roof Modeling</b><br><i>Adjusting roof vertices and height</i><br><img src="images/image-2.png" width="420"></td>
+    <td align="center"><b>3D Roof Modeling</b><br><i>Adjusting roof vertices and height</i><br><img width="500" alt="image" src="https://github.com/user-attachments/assets/b7fefcaf-7dda-4869-bebf-03808ba5358b" />
+</td>
   </tr>
   <tr>
-    <td align="center"><b>Solar Panel Placement</b><br><i>Automatic layout on selected planes</i><br><img src="images/image-3.png" width="420"></td>
-    <td align="center"><b>Efficiency Heatmap</b><br><i>Visualizing optimal areas for energy generation</i><br><img src="images/image-4.png" width="420"></td>
+    <td align="center"><b>Solar Panel Placement</b><br><i>Automatic layout on selected planes</i><br><img width="500" alt="image" src="https://github.com/user-attachments/assets/1cd70e8a-a8f5-4292-8202-45c345334468" />
+</td>
+    <td align="center"><b>Efficiency Heatmap</b><br><i>Visualizing optimal areas for energy generation</i><br><img width="500" alt="image" src="https://github.com/user-attachments/assets/d757200b-b644-43a6-9a9d-7e6190271bd9" />
+</td>
   </tr>
   <tr>
-    <td align="center"><b>Shadow Simulation</b><br><i>Real-time shadow analysis based on time of day</i><br><img src="images/image-5.png" width="420"></td>
-    <td align="center"><b>Obstacle Management</b><br><i>Defining chimneys and vents to avoid panel overlap</i><br><img src="images/image-6.png" width="420"></td>
+    <td align="center"><b>Shadow Simulation</b><br><i>Real-time shadow analysis based on time of day</i><br><img width="500" alt="image" src="https://github.com/user-attachments/assets/f4da0461-08bb-41f1-85cc-876e42be94f1" />
+</td>
+    <td align="center"><b>Obstacle Management</b><br><i>Defining chimneys and vents to avoid panel overlap</i><br><img width="500" alt="image" src="https://github.com/user-attachments/assets/f2bbd4d9-7038-4dd5-886d-f6c60b411624" />
+</td>
   </tr>
   <tr>
-    <td align="center"><b>Project Statistics</b><br><i>Monthly generation forecast</i><br><img src="images/image-7.png" width="420"></td>
-    <td align="center"><b>Financial Analysis</b><br><i>ROI and installation cost estimation</i><br><img src="images/image-8.png" width="420"></td>
+    <td align="center"><b>Project Statistics</b><br><i>Monthly generation forecast</i><br><img width="500" alt="image" src="https://github.com/user-attachments/assets/c132228f-5c0e-4f39-af4d-d65be8f3b99b" />
+</td>
+    <td align="center"><b>Financial Analysis</b><br><i>ROI and installation cost estimation</i><br><img width="500" alt="image" src="https://github.com/user-attachments/assets/224545c5-d5e6-4a2d-b352-0e949cc844d9" />
+</td>
   </tr>
 </table>
